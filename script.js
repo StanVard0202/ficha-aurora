@@ -541,3 +541,6 @@ function roll6(){
 		alert("Fracasso Dado:"+rollado6)
 	}
 }
+
+
+var someVarName = localStorage.getItem("someVarKey");
