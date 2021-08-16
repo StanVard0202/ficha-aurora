@@ -16,7 +16,7 @@ function vidahtml(vida){
 	html += "<tr><td>Vida:</td>"
     html += "<td>"+ vidaAtual + "/" + vidaMax + "</td>"
     html +="<td><button onClick='adicionarVida()'>Cura</button><button onClick='retirarVida()'>Dano</button></td></tr>"
-
+	
 	html += "<tr><td>Sanidade:</td>"
     html += "<td>"+ sanidadeatual + "/" + sanidadetotal + "</td>"
     html +="<td><button onClick='adicionarSanidade()'>Curar</button><button onClick='retirarSanidade()'>Remover</button><button onClick='rollsanidade()'>ROLL</button></td></tr>"
