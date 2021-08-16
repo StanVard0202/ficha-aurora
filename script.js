@@ -4,8 +4,8 @@ var sanidadeatual= 50
 var sanidadetotal= 50
 var banco = 18000
 
-vidaAtual=localStorage.getItem('vida')
-sanidadeatual=localStorage.getItem('sanidade')
+vidaAtual=Window.localStorage.getItem('vida')
+sanidadeatual=Window.localStorage.getItem('sanidade')
 
 var vida = [vidaAtual,vidaMax]
 vidahtml(vida)
@@ -16,7 +16,7 @@ function vidahtml(vida){
 	html += "<tr><td>Vida:</td>"
     html += "<td>"+ vidaAtual + "/" + vidaMax + "</td>"
     html +="<td><button onClick='adicionarVida()'>Cura</button><button onClick='retirarVida()'>Dano</button></td></tr>"
-	
+
 	html += "<tr><td>Sanidade:</td>"
     html += "<td>"+ sanidadeatual + "/" + sanidadetotal + "</td>"
     html +="<td><button onClick='adicionarSanidade()'>Curar</button><button onClick='retirarSanidade()'>Remover</button><button onClick='rollsanidade()'>ROLL</button></td></tr>"
