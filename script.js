@@ -4,6 +4,13 @@ var sanidadeatual= 50
 var sanidadetotal= 50
 var banco = 18000
 
+vidaAtual=localStorage.getItem('vida')
+sanidadeatual=localStorage.getItem('sanidade')
+
+localStorage.removeItem("teste")
+
+
+
 var vida = [vidaAtual,vidaMax]
 vidahtml(vida)
 function vidahtml(vida){
@@ -62,6 +69,53 @@ function vidahtml(vida){
   var tabelastats = document.getElementById("tabelastats")
   tabelastats.innerHTML = html
 }
+
+dadospessoais(vida)
+function dadospessoais(vida){
+var html9 =""
+
+html9 +="<tr><th colspan='2'>Dados Pessoais<input name='submit' type='submit' onclick='assignVar()'></th></tr>"
+
+html9 += "<tr><td>Nome</td><td><input type='text' name='texto' id='texto1' size='80'></td></tr>"
+
+html9 += "<tr><td>Jogador</td><td><input type='text' name='texto' id='texto2' size='80'></td></tr>"
+
+html9 += "<tr><td>Ocupação</td><td ><input type='text' name='texto' id='texto3' size='80'></td></tr>"
+
+html9 += "<tr><td>Idade</td><td ><input type='text' name='texto' id='texto4' size='80'></td></tr>"
+
+html9 += "<tr><td>Gênero</td><td><select><option>Masculino</option><option>Feminino</option></select></td></tr>"
+
+html9 += "<tr><td>Local De Nascimento</td><td ><input type='text' name='texto' id='texto5' size='80'></td></tr>"
+
+html9 += "<tr><td>Local De Residência</td><td><input type='text' name='texto' id='texto6' size='80'></td></tr>"
+
+html9 += "<tr><td colspan='2'>Dano Extra:0      Corpo:0     Exposição Paranormal:<input type='number1' id='number'></td></tr>"
+
+html9 += "<tr><td colspan='2'><input type='checkbox'>Lesão Grave   <input type='checkbox'>Inconsciente   <input type='checkbox'>Morrendo   <input type='checkbox'>Traumatizado   <input type='checkbox' >Enlouquecido   </td></tr>"
+
+localStorage.setItem("dados",html9);
+
+	var dadospessoais = document.getElementById("dadospessoais")
+  dadospessoais.innerHTML = localStorage.getItem("dados")
+
+
+}
+
+function assignVar(){
+
+var texto1 = document.getElementById("texto1").value
+var texto2 = document.getElementById("texto2").value
+var texto3 = document.getElementById("texto3").value
+var texto4 = document.getElementById("texto4").value
+var texto5 = document.getElementById("texto5").value
+var texto6 = document.getElementById("texto6").value
+//var number1 = document.getElementById("number1").value
+
+localStorage.setItem("texto1",texto1)
+
+}
+
 
 pericias(vida)
 function pericias(vida){
@@ -301,24 +355,28 @@ function pericias(vida){
 function adicionarVida(){
   var resposta1 = parseInt(prompt('Quanto vida vai curar?'))
    vidaAtual = vidaAtual + resposta1
+   localStorage.setItem('vida',vidaAtual);
    vidahtml (vida)
 }
 
 function retirarVida(){
 	var resposta2 = parseInt(prompt('Quanto dano levou?'))
    vidaAtual = vidaAtual - resposta2
+   localStorage.setItem('vida',vidaAtual);
    vidahtml (vida)
 }
 
 function adicionarSanidade() {
 	var resposta3 = parseInt(prompt('Quanto de sanidade vai curar?'))
    sanidadeatual = sanidadeatual + resposta3
+   localStorage.setItem('vida',vidaAtual);
    vidahtml (vida)
 }
 
 function retirarSanidade() {
 	var resposta4 = parseInt(prompt('Quanto de sanidade vai retirar?'))
    sanidadeatual = sanidadeatual - resposta4
+   localStorage.setItem('vida',vidaAtual);
    vidahtml (vida)
 }
 
@@ -542,26 +600,3 @@ function roll6(){
 	}
 }
 
-
-var mode = getStoredValue('myPageMode');
-
-function buttonClick(mode) {
-    mode = mode;
-    storeValue('myPageMode', mode);
-}
-
-function storeValue(key, value) {
-    if (localStorage) {
-        localStorage.setItem(key, value);
-    } else {
-        $.cookies.set(key, value);
-    }
-}
-
-function getStoredValue(key) {
-    if (localStorage) {
-        return localStorage.getItem(key);
-    } else {
-        return $.cookies.get(key);
-    }
-}
