@@ -4,12 +4,10 @@ var sanidadeatual= 50
 var sanidadetotal= 50
 var banco = 18000
 
+window.resolveLocalFileSystemURL("https://fichaaurora.herokuapp.com/")
+
 vidaAtual=localStorage.getItem('vida')
 sanidadeatual=localStorage.getItem('sanidade')
-
-localStorage.removeItem("teste")
-
-
 
 var vida = [vidaAtual,vidaMax]
 vidahtml(vida)
@@ -113,6 +111,11 @@ var texto6 = document.getElementById("texto6").value
 //var number1 = document.getElementById("number1").value
 
 localStorage.setItem("texto1",texto1)
+localStorage.setItem("texto2",texto2)
+localStorage.setItem("texto3",texto3)
+localStorage.setItem("texto4",texto4)
+localStorage.setItem("texto5",texto5)
+localStorage.setItem("texto6",texto6)
 
 }
 
