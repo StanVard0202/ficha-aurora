@@ -4,8 +4,6 @@ var sanidadeatual= 50
 var sanidadetotal= 50
 var banco = 18000
 
-window.resolveLocalFileSystemURL("https://fichaaurora.herokuapp.com/")
-
 vidaAtual=localStorage.getItem('vida')
 sanidadeatual=localStorage.getItem('sanidade')
 
