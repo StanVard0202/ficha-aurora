@@ -378,6 +378,7 @@ function retirarVida(){
 function adicionarSanidade() {
 	var resposta3 = parseInt(prompt('Quanto de sanidade vai curar?'))
    sanidadeatual = sanidadeatual + resposta3
+   localStorage.setItem("sanidade",sanidadeatual)
    vidahtml (vida)
 
 }
