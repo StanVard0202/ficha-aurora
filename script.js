@@ -4,8 +4,9 @@ var sanidadeatual= 50
 var sanidadetotal= 50
 var banco = 18000
 
-vidaAtual=Window.localStorage.getItem('vida')
-sanidadeatual=Window.localStorage.getItem('sanidade')
+
+vidaAtual=localStorage.getItem('vida')
+sanidadeatual=localStorage.getItem('sanidade')
 
 var vida = [vidaAtual,vidaMax]
 vidahtml(vida)
@@ -370,14 +371,14 @@ function retirarVida(){
 function adicionarSanidade() {
 	var resposta3 = parseInt(prompt('Quanto de sanidade vai curar?'))
    sanidadeatual = sanidadeatual + resposta3
-   localStorage.setItem('vida',vidaAtual);
+   localStorage.setItem('sanidade',sanidadeatual);
    vidahtml (vida)
 }
 
 function retirarSanidade() {
 	var resposta4 = parseInt(prompt('Quanto de sanidade vai retirar?'))
    sanidadeatual = sanidadeatual - resposta4
-   localStorage.setItem('vida',vidaAtual);
+   localStorage.setItem('sanidade',sanidadeatual);
    vidahtml (vida)
 }
 
