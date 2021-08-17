@@ -7,6 +7,7 @@ var banco = 18000
 
 vidaAtual=localStorage.getItem('vida')
 sanidadeatual=localStorage.getItem('sanidade')
+localStorage.setItem('sanidade',sanidadeatual)
 
 var vida = [vidaAtual,vidaMax]
 vidahtml(vida)
