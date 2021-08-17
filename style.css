@@ -15,6 +15,7 @@ table {
     border: 2px solid white;
     border-collapse: collapse;
 	position: center;
+    width: 900px;
 }
 
 h1 {
