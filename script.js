@@ -118,6 +118,9 @@ localStorage.setItem("texto4",texto4)
 localStorage.setItem("texto5",texto5)
 localStorage.setItem("texto6",texto6)
 
+localStorage.setItem('sanidade',sanidadeatual);
+localStorage.setItem('vida',vidaAtual);
+
 }
 
 
@@ -360,7 +363,7 @@ function adicionarVida(){
   var resposta1 = parseInt(prompt('Quanto vida vai curar?'))
    vidaAtual = vidaAtual + resposta1
 
-   localStorage.setItem('vida',vidaAtual);
+
 
    vidahtml (vida)
 }
@@ -368,27 +371,21 @@ function adicionarVida(){
 function retirarVida(){
 	var resposta2 = parseInt(prompt('Quanto dano levou?'))
    vidaAtual = vidaAtual - resposta2
-   localStorage.setItem('vida',vidaAtual);
+   
    vidahtml (vida)
 }
 
 function adicionarSanidade() {
 	var resposta3 = parseInt(prompt('Quanto de sanidade vai curar?'))
    sanidadeatual = sanidadeatual + resposta3
-
-   localStorage.setItem('sanidade',sanidadeatual);
-   
    vidahtml (vida)
 
 }
 
 function retirarSanidade() {
 	var resposta4 = parseInt(prompt('Quanto de sanidade vai retirar?'))
-   sanidadeatual = sanidadeatual - resposta4
-
-   localStorage.setItem('sanidade',sanidadeatual);
-
-   vidahtml (vida)
+    sanidadeatual = sanidadeatual - resposta4
+    vidahtml (vida)
 }
 
 function rollsanidade () {
