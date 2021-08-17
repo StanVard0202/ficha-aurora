@@ -1,14 +1,8 @@
-var vidaAtual = 11
+var vidaAtual = localStorage.getItem('vida')
 var vidaMax = 11
-var sanidadeatual= 50
+var sanidadeatual = localStorage.getItem('sanidade')
 var sanidadetotal= 50
 var banco = 18000
-
-
-vidaAtual = localStorage.getItem('vida')
-
-sanidadeatual = localStorage.getItem('sanidade')
-
 
 var vida = [vidaAtual,vidaMax]
 vidahtml(vida)
