@@ -44,7 +44,7 @@ function vidahtml(vida){
 
 	html +="<tr><td>Inteligencia:</td>"
 	html +="<td>14</td>"
-	html +="<td><button onClick='roll11()'>ROLL</button></td></tr>"
+	html +="<td><button onClick='roll14()'>ROLL</button></td></tr>"
 
 	html +="<tr><td>Poder:</td>"
 	html +="<td>10</td>"
